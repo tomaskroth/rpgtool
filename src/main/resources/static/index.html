@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Generator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="search.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="container">
+        <div class="header clearfix">
+            <h3 class="text-muted">RPG Tools - Magic Store Generator</h3>
+        </div>
+        <div class="col-md-12 jumbotron">
+            <form id="form">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="wealth">Wealth</label>
+                        <select class="form-control" name="wealth" id="wealth">
+                            <option value="POOR">Poor</option>
+                            <option value="MEDIUM">Medium</option>
+                            <option value="RICH">Rich</option>
+                            <option value="VERY_RICH">Very Rich</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="size">Size</label>
+                        <select class="form-control" name="size" id="size">
+                            <option value="TINY">Tiny</option>
+                            <option value="SMALL">Small</option>
+                            <option value="MEDIUM">Medium</option>
+                            <option value="BIG">Big</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 mb-1">
+                    </div>
+                    <div class="col-md-2 mb-1">
+                        <input type="checkbox" name="weapons" id="weapons" value="true"/>
+                        <label for="weapons">Weapons</label>
+                    </div>
+                    <div class="col-md-2 mb-1">
+                        <input type="checkbox" name="armors" id="armors" value="true"/>
+                        <label for="armors">Armors</label>
+                    </div>
+                    <div class="col-md-2 mb-1">
+                        <input type="checkbox" name="wondrous" id="wondrous" value="true"/>
+                        <label for="wondrous">Wondrous</label>
+                    </div>
+                    <div class="col-md-2 mb-1">
+                        <input type="checkbox" name="scrolls" id="scrolls" value="true"/>
+                        <label for="scrolls">Scrolls</label>
+                    </div>
+                    <div class="col-md-2 mb-1">
+                        <input type="checkbox" name="potions" id="potions" value="true"/>
+                        <label for="potions">Potions</label>
+                    </div>
+                    <div class="col-md-1 mb-1">
+                    </div>
+                </div>
+            </form>
+            <p><a class="btn btn-lg btn-success btn-block" href="#" id="generate" role="button">Generate</a></p>
+        </div>
+
+        <div class="col-md-12">
+            <table id="thetable" class="table table-striped display">
+                <thead>
+                <tr>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rarity</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2018 Tomás Kroth</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+</div><!-- /.container -->
+</body>
+</html>
