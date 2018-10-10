@@ -48,6 +48,7 @@ public class GenerateStore {
             Item item = items.get(itemIndex);
 
             if (itemType == ItemType.SCROLL && item.getName().contains("Spell Scroll")) {
+                item = item.clone();
                 String spellName = getRandomLeveledSpell(item);
                 item.setName(String.format(item.getName(), spellName));
             }
